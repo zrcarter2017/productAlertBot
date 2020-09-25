@@ -21,7 +21,7 @@ let products = [
     {'name': 'rtx3080', 'link': 'https://www.bestbuy.com/site/nvidia-geforce-rtx-3080-10gb-gddr6x-pci-express-4-0-graphics-card-titanium-and-black/6429440.p?skuId=6429440', 'exists': false, 'messageCount': 0, 'selector': selectors.bestBuy}
 ]
 
-var sendMessage = (product) => {
+let sendMessage = (product) => {
     client.messages
         .create({
             body: product.name + ' is back in stock: ' + product.link,
@@ -31,7 +31,7 @@ var sendMessage = (product) => {
         .then(message => console.log(message.sid));
 }
 
-var checkProductStatus = (product) => {
+let checkProductStatus = (product) => {
     const nightmare = Nightmare({ show: false })
     nightmare
         .useragent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36')
