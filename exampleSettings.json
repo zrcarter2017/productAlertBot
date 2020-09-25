@@ -1,0 +1,11 @@
+{
+    "credentials": {
+        "accountSid": "",
+        "authToken": ""
+    },
+    "numbers": {
+        "twilio": "+18042222222",
+        "user1": "+18041111111",
+        "user2": ""
+    }
+}
